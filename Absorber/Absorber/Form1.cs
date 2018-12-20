@@ -19,8 +19,7 @@ namespace Absorber
 
         private void button1_Click(object sender, EventArgs e)
         {
-            labelSystem.Text = "Hello world!";
-            numericUpDownTemperatureA.Value = comboBox1.SelectedIndex;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,6 +73,16 @@ namespace Absorber
         }
 
         private void label1_Click_7(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxAbsorber_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

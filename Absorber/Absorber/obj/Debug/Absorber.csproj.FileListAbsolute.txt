@@ -1,0 +1,10 @@
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\bin\Debug\Absorber.exe.config
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\bin\Debug\Absorber.exe
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\bin\Debug\Absorber.pdb
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.csprojAssemblyReference.cache
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.Form1.resources
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.Properties.Resources.resources
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.csproj.GenerateResource.cache
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.csproj.CoreCompileInputs.cache
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.exe
+D:\Uczelnia\Praca inżynierska\Absorber\Absorber\obj\Debug\Absorber.pdb

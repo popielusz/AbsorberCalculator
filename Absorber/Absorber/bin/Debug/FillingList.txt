@@ -1,0 +1,13 @@
+﻿Pierścienie porcelanowe (8x8x1,5);570;0,64
+Pierścienie ceramiczne (15x15x2);330;0,70
+Pierścienie ceramiczne (25x25x3);204;0,74
+Pierścienie ceramiczne (35x35x4);140;0,78
+Pierścienie ceramiczne (50x50x5);87,5;0,785
+Pierścienie stalowe (35x35x2,5);147;0,83
+Pierścienie stalowe (50x50x1);110;0,95
+Żwir okrągły (42);80,5;0,388
+Adnezyt w kawałkach (43,2);68;0,565
+Koks w kawałkach (42,6);77;0,56
+Koks w kawałkach (40,8);286;0,545
+Koks w kawałkach (28,6);110;0,535
+Koks w kawałkach (24,4);120;0,532

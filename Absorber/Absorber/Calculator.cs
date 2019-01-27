@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
+// Właściwości: MassIntensityA; Efficiency, EmulgationPercentage są przyjmowane i zwracane w procentach 
+
 namespace Absorber
 {
     class Calculator : Object
@@ -14,20 +16,16 @@ namespace Absorber
         private double _MassTransferCoefficient;
         private double _AbsorbateMolarMass;
         private double _EquationA;
-        private double _EquationB;
         private double _DensityA;
         private double _DensityB;
+        private double _DensityNormalB;
         private double _ViscosityA;
-        private double _ViscosityB;
         private double _MassIntensityA;
         private double _VolumeIntensityB;
-        private double _AbsorbateConcentrationA;
         private double _AbsorbateConcentrationB;
         private double _Efficiency;
         private double _EmulgationPercentage;
         private double _AbsorbentMolarMass;
-
-        private double _UpperDrivingForce;
 
         private const double GravitationalAcceleration = 9.80665;
         private const double AbsorptionCoefficient = 0.022;
@@ -56,12 +54,6 @@ namespace Absorber
             set { _EquationA = value; }
         }
 
-        public double EquationB
-        {
-            get { return _EquationB; }
-            set { _EquationB = value; }
-        }
-
         public double DensityA
         {
             get { return _DensityA; }
@@ -74,16 +66,16 @@ namespace Absorber
             set { _DensityB = value; }
         }
 
+        public double DensityNormalB
+        {
+            get { return _DensityNormalB; }
+            set { _DensityNormalB = value; }
+        }
+
         public double ViscosityA
         {
             get { return _ViscosityA; }
             set { _ViscosityA = value; }
-        }
-
-        public double ViscosityB
-        {
-            get { return _ViscosityB; }
-            set { _ViscosityB = value; }
         }
 
         public double MassIntensityA
@@ -98,39 +90,33 @@ namespace Absorber
             set { _VolumeIntensityB = value; }
         }
 
-        public double AbsorbateConcentrationA
-        {
-            get { return _AbsorbateConcentrationA; }
-            set { _AbsorbateConcentrationA = value; }
-        }
-
         public double AbsorbateConcentrationB
         {
-            get { return _AbsorbateConcentrationB; }
-            set { _AbsorbateConcentrationB = value; }
+            get { return _AbsorbateConcentrationB * 100; }
+            set { _AbsorbateConcentrationB = value / 100; }
         }
 
         public double Efficiency
         {
-            get { return _Efficiency; }
-            set { _Efficiency = value; }
+            get { return _Efficiency * 100; }
+            set { _Efficiency = value / 100; }
         }
 
         public double EmulgationPercentage
         {
-            get { return _EmulgationPercentage; }
-            set { _EmulgationPercentage = value; }
+            get { return _EmulgationPercentage * 100; }
+            set { _EmulgationPercentage = value / 100; }
         }
 
         public double AbsorbentMolarMass
         {
             get { return _AbsorbentMolarMass; }
             set { _AbsorbentMolarMass = value; }
-        }        
+        }
 
         public Calculator()
         {
-            /* konstruktor klasy, która dokonuje obliczeń parametrów absorbera,
+            /* Konstruktor klasy, która dokonuje obliczeń parametrów absorbera,
                tu jest przydzielana pamięć na obiekty wewnętrzne kalkulatora */
             _FillingSurfaces = new List<double>();
             _FillingVolumes = new List<double>();
@@ -139,48 +125,99 @@ namespace Absorber
 
         public void Clear()
         {
-            /* czyści te wewnętrzne pola klasy koalkulatora, które służą do przekazywania 
+            /* Czyści te wewnętrzne pola klasy koalkulatora, które służą do przekazywania 
                danych wejściowych do obliczeń, lista wypełnień absorbera nie jest czyszczona */
             _FillingIndex = -1;
             _MassTransferCoefficient = 0;
             _AbsorbateMolarMass = 0;
             _AbsorbentMolarMass = 0;
-            _EquationA = 0;
-            _EquationB = 0;
-            _DensityA = 0;
-            _DensityB = 0;
+            _EquationA = 1;
+            _DensityA = 1;
+            _DensityB = 1;
+            _DensityNormalB = 1;
             _ViscosityA = 0;
-            _ViscosityB = 0;
             _MassIntensityA = 0;
             _VolumeIntensityB = 0;
-            _AbsorbateConcentrationA = 0;
             _AbsorbateConcentrationB = 0;
             _Efficiency = 0;
             _EmulgationPercentage = 0;
-            _UpperDrivingForce = 0;
+        }
+
+        public bool InvalidValuesCheck(double EquationA, double MassTransferCoefficient, double AbsorbateMolarMass, double AbsorbentMolarMass, double ViscosityA, double MassIntensityA, double VolumeIntensityB, double AbsorbateConcentrationB, double Efficiency, double EmulgationPercentage)
+        {
+            bool Result = (EquationA == 0)
+                            || (MassTransferCoefficient == 0)
+                            || (AbsorbateMolarMass == 0)
+                            || (AbsorbentMolarMass == 0)
+                            || (ViscosityA == 0)
+                            || (MassIntensityA == 0)
+                            || (VolumeIntensityB == 0)
+                            || (AbsorbateConcentrationB == 0)
+                            || (Efficiency == 0)
+                            || (Efficiency == 100)
+                            || (EmulgationPercentage == 0);
+            return Result;
+        }
+
+        public int WarningCheck()
+        {
+            int WarningCode = 0;
+            // Sprawdzenie czy nie zostały wprowadzone nieprawidłowe dane
+            if (InvalidValuesCheck(_EquationA, _MassTransferCoefficient, _AbsorbateMolarMass, _AbsorbentMolarMass, _ViscosityA, _MassIntensityA, _VolumeIntensityB, _AbsorbateConcentrationB, _Efficiency, _EmulgationPercentage))
+            {
+                // Błąd: wpisane dane są nieprawidłowe (np. wsp. A = 0)
+                WarningCode = 2;
+                return WarningCode;
+            }
+            else
+            {
+                // Sprawdzenie czy zostało wybrane wypełnienie z listy rozwijanej
+                if (_FillingIndex > -1)
+                {
+                        // !!! Czy można to zrobić w bardziej elegancki sposób? (podawanie zwenętrznej zmiennej Profile do funckji WettabilityCheck) i podobnie wyżej
+                        double Height = 0;
+                        double Profile = 0;
+                        Calculate(out Height, out Profile);
+                        if (WettabilityCheck(_MassIntensityA, _DensityA, Profile))
+                        {
+                            // Obliczenia przebiegły pomyślnie
+                            WarningCode = 0;
+                            return WarningCode;
+                        }
+                        else
+                        {
+                            // Błąd: Niepoprawnie dobrany wsp. zwilżalności (Taki, że gęstość zraszania jest =< 5)
+                            WarningCode = 3;
+                            return WarningCode;
+                        }
+                }
+                else
+                {
+                    // Błąd: nieprawidłowo wybrany FillingIndex (pusty)
+                    WarningCode = 1;
+                    return WarningCode;
+                }
+            }
         }
 
         public bool Calculate(out double AbsorberHeight, out double AbsorberProfile)
         {
-            /* tu wykonywane są właściwe obliczenia parametrów absorbera */
+            /* Właściwe obliczenia parametrów absorbera */
             bool Result = false;
-            // zerowanie argumentów przekazanych do funkcji
+            // Zerowanie argumentów przekazanych do funkcji
             AbsorberHeight = 0;
             AbsorberProfile = 0;
-            // jeśli wybrano jakieś wypełnienie to kalkulator wykonuje obliczenia
-            if (_FillingIndex > -1)
-            {
-                double FillingSurface = _FillingSurfaces[_FillingIndex];
-                double FillingVolume = _FillingVolumes[_FillingIndex];
-                double AbsorbateMolarIntensity = CalculateAbsorbateMolarIntensity(_VolumeIntensityB, _AbsorbateConcentrationB, _Efficiency);
-                double MassTransferSurface = CalculateMassTransferSurface(AbsorbateMolarIntensity, _VolumeIntensityB, _AbsorbateConcentrationB, _Efficiency, _MassIntensityA, _MassTransferCoefficient);
-                double RequiredFillingSurface = CalculateRequiredFillingSurface(MassTransferSurface, FillingSurface);
-                double MassIntensityB = ConvertIntensityVolumeToMass(_VolumeIntensityB, _DensityB, _AbsorbateMolarMass, AbsorbateMolarIntensity);
-
-            }
+            double FillingSurface = _FillingSurfaces[_FillingIndex];
+            double FillingVolume = _FillingVolumes[_FillingIndex];
+            double AbsorbateMolarIntensity = CalculateAbsorbateMolarIntensity(_VolumeIntensityB, _AbsorbateConcentrationB, _Efficiency);
+            double MassTransferSurface = CalculateMassTransferSurface(AbsorbateMolarIntensity, _AbsorbentMolarMass, _VolumeIntensityB, _AbsorbateConcentrationB, _Efficiency, _MassIntensityA, _MassTransferCoefficient);
+            double RequiredFillingSurface = CalculateRequiredFillingSurface(MassTransferSurface, FillingSurface);
+            double MassIntensityB = ConvertIntensityVolumeToMass(_VolumeIntensityB, _DensityNormalB, _AbsorbateMolarMass, AbsorbateMolarIntensity);
+            double Velocity = CalculateVelocity(FillingSurface,_DensityB,_DensityA,_ViscosityA,GravitationalAcceleration,FillingVolume,AbsorptionCoefficient,_MassIntensityA,MassIntensityB,_EmulgationPercentage);
+            AbsorberProfile = CalculateAbsorberProfile(MassIntensityB, _DensityB, Velocity);
+            AbsorberHeight = CalculateFillingHeight(RequiredFillingSurface, AbsorberProfile);
             return Result;
         }
-
         private double CalculateAbsorbateMolarIntensity(double VolumeIntensityB, double ConcentrationB, double Efficiency)
         {
             // M
@@ -188,18 +225,22 @@ namespace Absorber
             return AbsorbateMolarIntensity;
         }
 
-        private double CalculateMassTransferSurface(double AbsorbateMolarIntensity,  double VolumeIntensityB, double ConcentrationB, double Efficiency, double MassIntensityA, double MassTransferCoefficient)
+        private double CalculateMassTransferSurface(double AbsorbateMolarIntensity, double AbsorbentMolarMass, double VolumeIntensityB, double ConcentrationB, double Efficiency, double MassIntensityA, double MassTransferCoefficient)
         {
-            double AbsorbateFinalMolarConcentrationA = AbsorbateMolarIntensity / (MassIntensityA / 18);
+            // X_d
+            double AbsorbateFinalMolarConcentrationA = AbsorbateMolarIntensity / (MassIntensityA / AbsorbentMolarMass);
+            // Y_d
             double AbsorbateInitialMolarConcentrationB = ConcentrationB / (1 - ConcentrationB);
             // Y_g
             double AbsorbateFinalMolarConcentrationB = (ConcentrationB * (1 - Efficiency)) / (1 - ConcentrationB);
+            // Y_d*
+            double AbsorbateEquilibrumConcentrationB = EquationA * AbsorbateFinalMolarConcentrationA;
             // Delta Y_d
-            double BottomDrivingForce = EquationA * AbsorbateFinalMolarConcentrationA + EquationB;
-            // Delta Y_g (0 bo zakładamy Xw = 0 czyli że woda zraszająca skruber jest na początku czysta)
-            _UpperDrivingForce = AbsorbateFinalMolarConcentrationB - 0;
+            double BottomDrivingForce = AbsorbateInitialMolarConcentrationB - AbsorbateEquilibrumConcentrationB;
+            // Delta Y_g ( Xw = 0 => woda zraszająca skruber jest na wlocie czysta)
+            double UpperDrivingForce = AbsorbateFinalMolarConcentrationB;
             // Delta Y_śr
-            double AverageDrivingForce = (BottomDrivingForce - _UpperDrivingForce) / (2.3 * Math.Log10(BottomDrivingForce / _UpperDrivingForce));
+            double AverageDrivingForce = (BottomDrivingForce - UpperDrivingForce) / (2.3 * Math.Log10(BottomDrivingForce / UpperDrivingForce));
             // F
             double MassTransferSurface = AbsorbateMolarIntensity / (MassTransferCoefficient * AverageDrivingForce);
             return MassTransferSurface;
@@ -207,31 +248,31 @@ namespace Absorber
 
         private double CalculateRequiredFillingSurface(double MassTransferSurface, double FillingValue)
         {
-            double Wettability = 1;
-            //Sprawdzanie czy = 1? 
+            // Dla współczynnika zwilżalności = 1
             double RequiredFillingSurface = MassTransferSurface / FillingValue;
             return RequiredFillingSurface;
         }
 
-        private double ConvertIntensityVolumeToMass(double VolumeIntensity, double Density, double MolarMass, double MolarIntensity)
+        private double ConvertIntensityVolumeToMass(double VolumeIntensity, double DensityNormal, double MolarMass, double MolarIntensity)
         {
-            //konwersja strumienia objętościowego na masowy (?)
-            double MassIntensity = VolumeIntensity * Density + (MolarIntensity * MolarMass) / 2;
+            // Konwersja strumienia objętościowego na masowy - wzór empiryczny
+            double MassIntensity = VolumeIntensity * DensityNormal + (MolarIntensity * MolarMass) / 2;
             return MassIntensity;
         }
 
-        private double CalculateEmulgationVelocity(double EmulgationPercentage, double RequiredFillingSurface, double AbsorbateMolarIntensity, double MassIntensityB, double FillingValue, double DensityA, double DensityB, double ViscosityA, double MassIntensityA, double VolumeIntensityB, double AbsorbateMolarMass, double FreeVolume)
+        private double CalculateVelocity(double FillingValue, double DensityB, double DensityA, double ViscosityA, double GravitationalAcceleration, double FillingVolume, double AbsorptionCoefficient, double MassIntensityA, double MassIntensityB, double EmulgationPercentage)
         {
-            
-            //objetosc swobodna w FillingList - FreeVolume
-            double EmulgationVelocity = Math.Sqrt((Math.Pow(10,(AbsorptionCoefficient * 1.75  *  Math.Pow((MassIntensityA / MassIntensityB),0.25) * Math.Pow((DensityB/(DensityA-DensityB)),0.125)))) / ((RequiredFillingSurface * DensityB*Math.Pow(ViscosityA,016))/(GravitationalAcceleration*Math.Pow(FreeVolume,3)*(DensityA-DensityB))));
+            // d oraz f - współczynniki pomocnicze przy obliczaniu prędkości przepływu gazu, wprowadzone w celu polepszenia czytelności kodu i ułatwienia debuggowania
+            double d = (FillingValue*DensityB*Math.Pow((ViscosityA),0.16))/(GravitationalAcceleration*Math.Pow(FillingVolume,3)*(DensityA-DensityB));
+            double f = (AbsorptionCoefficient - 1.75 * Math.Pow((MassIntensityA/MassIntensityB),0.25)*Math.Pow((DensityB/(DensityA-DensityB)),0.125));
+            double EmulgationVelocity = Math.Sqrt(Math.Pow(10,(f-Math.Log10(d))));
             double Velocity = EmulgationVelocity * EmulgationPercentage; 
             return Velocity;
         }
 
-        private double CalculateAbsorberProfile(double MassIntensityB, double DensityB)
+        private double CalculateAbsorberProfile(double MassIntensityB, double DensityB, double Velocity)
         {
-            double AbsorberProfile = MassIntensityB / (3600 * DensityB);
+            double AbsorberProfile = MassIntensityB / (3600 * Velocity * DensityB);
             return AbsorberProfile;
         }
 
@@ -243,18 +284,18 @@ namespace Absorber
 
         private bool WettabilityCheck(double VolumeIntensity, double DensityA, double AbsorberProfile)
         {
-            bool SprayDensityFail = true;
+            bool ValidSprayDensity = false;
             double SprayDensity = VolumeIntensity / (DensityA * AbsorberProfile);
-            if (SprayDensity < 5)
+            if (SprayDensity > 5)
             {
-                SprayDensityFail = true;
+                ValidSprayDensity = true;
             }
-            return SprayDensityFail;
+            return ValidSprayDensity;
         }
 
         public void LoadFillingFromFile(String Path, IList FillingNames)
         {
-            /* wczytanie z pliku tekstowego opisów i wartości liczbowych różnego
+            /* Wczytanie z pliku tekstowego opisów i wartości liczbowych różnego
                rodzaju wypełnień dla absorbera, następnie umieszczenie opisów
                wypełnienia w liście rozwijanej oraz wartości liczbowych w liście
                wewnętrznej programu */

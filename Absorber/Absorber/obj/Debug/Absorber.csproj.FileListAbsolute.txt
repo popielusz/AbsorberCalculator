@@ -27,3 +27,4 @@ D:\Uczelnia\Praca inżynierska\14.01\Absorber\Absorber\obj\Debug\Absorber.csproj
 D:\Uczelnia\Praca inżynierska\14.01\Absorber\Absorber\obj\Debug\Absorber.csproj.CoreCompileInputs.cache
 D:\Uczelnia\Praca inżynierska\14.01\Absorber\Absorber\obj\Debug\Absorber.exe
 D:\Uczelnia\Praca inżynierska\14.01\Absorber\Absorber\obj\Debug\Absorber.pdb
+D:\Praca - PRz\Dyplomanci\Prace inżynierskie 2018\Przemysław Nabożny\Absorber\Absorber\obj\Debug\Absorber.csprojResolveAssemblyReference.cache

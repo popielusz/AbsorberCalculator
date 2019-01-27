@@ -7,7 +7,7 @@ Building basic GUI
 Spliting .txt files
 
 # Things I want to improve
-To add a graph which shows the equilibrium and operating line
+* To add a graph which shows the equilibrium and operating line
 Some toolbars (like Help, editing filling list inside the application, loading and saving it)
-Optimize GUI
-Raport generator with simple absorption scheme inside
+* Optimize GUI
+* Raport generator with simple absorption scheme inside

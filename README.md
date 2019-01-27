@@ -1,10 +1,11 @@
 # AbsorberCalculator
-A simple app calculating absorber's height and profile using basic system conditions
-Reading some data from .txt file
+A simple app calculating absorber's height and profile using basic system conditions, reading some data from .txt file
 
 # What I learned
-Building basic GUI
-Spliting .txt files
+* Building basic GUI
+* Spliting .txt files
+* General object-oriented programming concepts
+* To always check which function is called first :) 
 
 # Things I want to improve
 * To add a graph which shows the equilibrium and operating line

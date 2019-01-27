@@ -30,11 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBoxInputData = new System.Windows.Forms.GroupBox();
+            this.groupBoxOutputData = new System.Windows.Forms.GroupBox();
+            this.labelAbsorberProfileUnit = new System.Windows.Forms.Label();
+            this.labelAbsorberHeightUnit = new System.Windows.Forms.Label();
+            this.textBoxLog = new System.Windows.Forms.TextBox();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.labelAbsorberProfile = new System.Windows.Forms.Label();
+            this.textBoxAbsorberProfile = new System.Windows.Forms.TextBox();
+            this.textBoxAbsorberHeight = new System.Windows.Forms.TextBox();
+            this.labelAbsorberHeight = new System.Windows.Forms.Label();
             this.groupBoxSystem = new System.Windows.Forms.GroupBox();
             this.groupBoxEquation = new System.Windows.Forms.GroupBox();
-            this.labelEquationB = new System.Windows.Forms.Label();
             this.labelEquationA = new System.Windows.Forms.Label();
-            this.numericUpDownEquationB = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownEquationA = new System.Windows.Forms.NumericUpDown();
             this.labelMassTransferCoefficientUnit = new System.Windows.Forms.Label();
             this.comboBoxFilling = new System.Windows.Forms.ComboBox();
@@ -52,22 +60,22 @@
             this.numericUpDownEfficiency = new System.Windows.Forms.NumericUpDown();
             this.labelEfficiency = new System.Windows.Forms.Label();
             this.groupBoxInert = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDownDensityNormalB = new System.Windows.Forms.NumericUpDown();
+            this.labelDensityNormalB = new System.Windows.Forms.Label();
             this.labelAbsorbateConcentrationUnitB = new System.Windows.Forms.Label();
             this.labelVolumeIntensityUnitB = new System.Windows.Forms.Label();
             this.numericUpDownAbsorbateConcentrationB = new System.Windows.Forms.NumericUpDown();
             this.labelAbsorbateConcentrationB = new System.Windows.Forms.Label();
-            this.labelViscosityUnitB = new System.Windows.Forms.Label();
             this.labelDensityUnitDensityB = new System.Windows.Forms.Label();
             this.numericUpDownVolumeIntensityB = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownViscosityB = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDensityB = new System.Windows.Forms.NumericUpDown();
-            this.labelViscosityB = new System.Windows.Forms.Label();
             this.labelVolumeIntensityB = new System.Windows.Forms.Label();
             this.labelDenistyB = new System.Windows.Forms.Label();
             this.groupBoxAbsorbent = new System.Windows.Forms.GroupBox();
-            this.labelAbsorbateConcentrationUnitA = new System.Windows.Forms.Label();
-            this.numericUpDownAbsorbateConcentrationA = new System.Windows.Forms.NumericUpDown();
-            this.labelAbsorbateConcentrationA = new System.Windows.Forms.Label();
+            this.labelAbsorbentMolarMassUnit = new System.Windows.Forms.Label();
+            this.labelAbsorbentMolarMass = new System.Windows.Forms.Label();
+            this.numericUpDownAbsorbentMolarMass = new System.Windows.Forms.NumericUpDown();
             this.labelDensityUnitA = new System.Windows.Forms.Label();
             this.numericUpDownDensityA = new System.Windows.Forms.NumericUpDown();
             this.labelDensityA = new System.Windows.Forms.Label();
@@ -78,23 +86,10 @@
             this.numericUpDownMassIntensityA = new System.Windows.Forms.NumericUpDown();
             this.labelMassIntensityA = new System.Windows.Forms.Label();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
-            this.textBoxLog = new System.Windows.Forms.TextBox();
-            this.groupBoxOutputData = new System.Windows.Forms.GroupBox();
-            this.labelAbsorberProfileUnit = new System.Windows.Forms.Label();
-            this.labelAbsorberHeightUnit = new System.Windows.Forms.Label();
-            this.buttonCalculate = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
-            this.labelAbsorberProfile = new System.Windows.Forms.Label();
-            this.textBoxAbsorberProfile = new System.Windows.Forms.TextBox();
-            this.textBoxAbsorberHeight = new System.Windows.Forms.TextBox();
-            this.labelAbsorberHeight = new System.Windows.Forms.Label();
-            this.labelAbsorbentMolarMassUnit = new System.Windows.Forms.Label();
-            this.labelAbsorbentMolarMass = new System.Windows.Forms.Label();
-            this.numericUpDownAbsorbentMolarMass = new System.Windows.Forms.NumericUpDown();
             this.groupBoxInputData.SuspendLayout();
+            this.groupBoxOutputData.SuspendLayout();
             this.groupBoxSystem.SuspendLayout();
             this.groupBoxEquation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEquationB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEquationA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMassTransferCoefficient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateMolarMass)).BeginInit();
@@ -102,17 +97,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmulgationPercentage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEfficiency)).BeginInit();
             this.groupBoxInert.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityNormalB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateConcentrationB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVolumeIntensityB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownViscosityB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityB)).BeginInit();
             this.groupBoxAbsorbent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateConcentrationA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbentMolarMass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownViscosityA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMassIntensityA)).BeginInit();
-            this.groupBoxOutputData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbentMolarMass)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxInputData
@@ -131,10 +124,125 @@
             this.groupBoxInputData.Name = "groupBoxInputData";
             this.groupBoxInputData.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxInputData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBoxInputData.Size = new System.Drawing.Size(743, 601);
+            this.groupBoxInputData.Size = new System.Drawing.Size(743, 569);
             this.groupBoxInputData.TabIndex = 0;
             this.groupBoxInputData.TabStop = false;
             this.groupBoxInputData.Text = "Dane wejściowe";
+            // 
+            // groupBoxOutputData
+            // 
+            this.groupBoxOutputData.Controls.Add(this.labelAbsorberProfileUnit);
+            this.groupBoxOutputData.Controls.Add(this.labelAbsorberHeightUnit);
+            this.groupBoxOutputData.Controls.Add(this.textBoxLog);
+            this.groupBoxOutputData.Controls.Add(this.buttonCalculate);
+            this.groupBoxOutputData.Controls.Add(this.buttonClear);
+            this.groupBoxOutputData.Controls.Add(this.labelAbsorberProfile);
+            this.groupBoxOutputData.Controls.Add(this.textBoxAbsorberProfile);
+            this.groupBoxOutputData.Controls.Add(this.textBoxAbsorberHeight);
+            this.groupBoxOutputData.Controls.Add(this.labelAbsorberHeight);
+            this.groupBoxOutputData.Location = new System.Drawing.Point(12, 431);
+            this.groupBoxOutputData.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBoxOutputData.Name = "groupBoxOutputData";
+            this.groupBoxOutputData.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBoxOutputData.Size = new System.Drawing.Size(718, 112);
+            this.groupBoxOutputData.TabIndex = 6;
+            this.groupBoxOutputData.TabStop = false;
+            this.groupBoxOutputData.Text = "Dane wyjściowe";
+            // 
+            // labelAbsorberProfileUnit
+            // 
+            this.labelAbsorberProfileUnit.AutoSize = true;
+            this.labelAbsorberProfileUnit.Location = new System.Drawing.Point(657, 52);
+            this.labelAbsorberProfileUnit.Name = "labelAbsorberProfileUnit";
+            this.labelAbsorberProfileUnit.Size = new System.Drawing.Size(22, 15);
+            this.labelAbsorberProfileUnit.TabIndex = 10;
+            this.labelAbsorberProfileUnit.Text = "m²";
+            // 
+            // labelAbsorberHeightUnit
+            // 
+            this.labelAbsorberHeightUnit.AutoSize = true;
+            this.labelAbsorberHeightUnit.Location = new System.Drawing.Point(657, 22);
+            this.labelAbsorberHeightUnit.Name = "labelAbsorberHeightUnit";
+            this.labelAbsorberHeightUnit.Size = new System.Drawing.Size(18, 15);
+            this.labelAbsorberHeightUnit.TabIndex = 9;
+            this.labelAbsorberHeightUnit.Text = "m";
+            // 
+            // textBoxLog
+            // 
+            this.textBoxLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxLog.Location = new System.Drawing.Point(12, 80);
+            this.textBoxLog.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.ReadOnly = true;
+            this.textBoxLog.Size = new System.Drawing.Size(700, 23);
+            this.textBoxLog.TabIndex = 4;
+            this.toolTipMain.SetToolTip(this.textBoxLog, "Komunikaty wyświetlane przez program w czasie pracy");
+            // 
+            // buttonCalculate
+            // 
+            this.buttonCalculate.Location = new System.Drawing.Point(12, 23);
+            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(138, 50);
+            this.buttonCalculate.TabIndex = 0;
+            this.buttonCalculate.Text = "Oblicz";
+            this.toolTipMain.SetToolTip(this.buttonCalculate, "Rozpocznij obliczenia");
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(158, 22);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(138, 51);
+            this.buttonClear.TabIndex = 1;
+            this.buttonClear.Text = "Wyczyść";
+            this.toolTipMain.SetToolTip(this.buttonClear, "Wyczyść wszystkie pola");
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // labelAbsorberProfile
+            // 
+            this.labelAbsorberProfile.AutoSize = true;
+            this.labelAbsorberProfile.Location = new System.Drawing.Point(377, 53);
+            this.labelAbsorberProfile.Name = "labelAbsorberProfile";
+            this.labelAbsorberProfile.Size = new System.Drawing.Size(111, 15);
+            this.labelAbsorberProfile.TabIndex = 3;
+            this.labelAbsorberProfile.Text = "Przekrój absorbera";
+            // 
+            // textBoxAbsorberProfile
+            // 
+            this.textBoxAbsorberProfile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxAbsorberProfile.Location = new System.Drawing.Point(561, 50);
+            this.textBoxAbsorberProfile.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxAbsorberProfile.Name = "textBoxAbsorberProfile";
+            this.textBoxAbsorberProfile.ReadOnly = true;
+            this.textBoxAbsorberProfile.Size = new System.Drawing.Size(87, 23);
+            this.textBoxAbsorberProfile.TabIndex = 3;
+            this.textBoxAbsorberProfile.Text = "0";
+            this.toolTipMain.SetToolTip(this.textBoxAbsorberProfile, "Obliczony przekrój absorbera");
+            // 
+            // textBoxAbsorberHeight
+            // 
+            this.textBoxAbsorberHeight.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxAbsorberHeight.Location = new System.Drawing.Point(561, 20);
+            this.textBoxAbsorberHeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxAbsorberHeight.Name = "textBoxAbsorberHeight";
+            this.textBoxAbsorberHeight.ReadOnly = true;
+            this.textBoxAbsorberHeight.Size = new System.Drawing.Size(87, 23);
+            this.textBoxAbsorberHeight.TabIndex = 2;
+            this.textBoxAbsorberHeight.Text = "0";
+            this.toolTipMain.SetToolTip(this.textBoxAbsorberHeight, "Obliczona wysokość warstwy wypełnienia");
+            // 
+            // labelAbsorberHeight
+            // 
+            this.labelAbsorberHeight.AutoSize = true;
+            this.labelAbsorberHeight.Location = new System.Drawing.Point(377, 23);
+            this.labelAbsorberHeight.Name = "labelAbsorberHeight";
+            this.labelAbsorberHeight.Size = new System.Drawing.Size(178, 15);
+            this.labelAbsorberHeight.TabIndex = 0;
+            this.labelAbsorberHeight.Text = "Wysokość warstwy wypełnienia";
             // 
             // groupBoxSystem
             // 
@@ -151,57 +259,32 @@
             this.groupBoxSystem.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxSystem.Name = "groupBoxSystem";
             this.groupBoxSystem.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxSystem.Size = new System.Drawing.Size(710, 120);
-            this.groupBoxSystem.TabIndex = 7;
+            this.groupBoxSystem.Size = new System.Drawing.Size(718, 120);
+            this.groupBoxSystem.TabIndex = 0;
             this.groupBoxSystem.TabStop = false;
             this.groupBoxSystem.Text = "Układ";
             // 
             // groupBoxEquation
             // 
-            this.groupBoxEquation.Controls.Add(this.labelEquationB);
             this.groupBoxEquation.Controls.Add(this.labelEquationA);
-            this.groupBoxEquation.Controls.Add(this.numericUpDownEquationB);
             this.groupBoxEquation.Controls.Add(this.numericUpDownEquationA);
-            this.groupBoxEquation.Location = new System.Drawing.Point(426, 20);
+            this.groupBoxEquation.Location = new System.Drawing.Point(434, 19);
             this.groupBoxEquation.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxEquation.Name = "groupBoxEquation";
             this.groupBoxEquation.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxEquation.Size = new System.Drawing.Size(269, 85);
-            this.groupBoxEquation.TabIndex = 26;
+            this.groupBoxEquation.Size = new System.Drawing.Size(276, 85);
+            this.groupBoxEquation.TabIndex = 2;
             this.groupBoxEquation.TabStop = false;
-            this.groupBoxEquation.Text = "Równanie linii równowagi Y* = aX + b";
-            // 
-            // labelEquationB
-            // 
-            this.labelEquationB.AutoSize = true;
-            this.labelEquationB.Location = new System.Drawing.Point(8, 53);
-            this.labelEquationB.Name = "labelEquationB";
-            this.labelEquationB.Size = new System.Drawing.Size(91, 15);
-            this.labelEquationB.TabIndex = 0;
-            this.labelEquationB.Text = "Współczynnik b";
+            this.groupBoxEquation.Text = "Równanie linii równowagi Y*";
             // 
             // labelEquationA
             // 
             this.labelEquationA.AutoSize = true;
-            this.labelEquationA.Location = new System.Drawing.Point(8, 22);
+            this.labelEquationA.Location = new System.Drawing.Point(17, 31);
             this.labelEquationA.Name = "labelEquationA";
             this.labelEquationA.Size = new System.Drawing.Size(91, 15);
             this.labelEquationA.TabIndex = 0;
             this.labelEquationA.Text = "Współczynnik a";
-            // 
-            // numericUpDownEquationB
-            // 
-            this.numericUpDownEquationB.DecimalPlaces = 2;
-            this.numericUpDownEquationB.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownEquationB.Location = new System.Drawing.Point(131, 51);
-            this.numericUpDownEquationB.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.numericUpDownEquationB.Name = "numericUpDownEquationB";
-            this.numericUpDownEquationB.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownEquationB.TabIndex = 5;
             // 
             // numericUpDownEquationA
             // 
@@ -211,16 +294,22 @@
             0,
             0,
             131072});
-            this.numericUpDownEquationA.Location = new System.Drawing.Point(131, 20);
+            this.numericUpDownEquationA.Location = new System.Drawing.Point(140, 29);
             this.numericUpDownEquationA.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.numericUpDownEquationA.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            131072});
             this.numericUpDownEquationA.Name = "numericUpDownEquationA";
             this.numericUpDownEquationA.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownEquationA.TabIndex = 4;
+            this.numericUpDownEquationA.TabIndex = 0;
+            this.toolTipMain.SetToolTip(this.numericUpDownEquationA, "Współczynnik a równania linii równowagi");
             this.numericUpDownEquationA.Value = new decimal(new int[] {
-            1,
+            1001,
             0,
             0,
-            0});
+            196608});
             // 
             // labelMassTransferCoefficientUnit
             // 
@@ -241,8 +330,9 @@
             this.comboBoxFilling.Location = new System.Drawing.Point(194, 79);
             this.comboBoxFilling.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.comboBoxFilling.Name = "comboBoxFilling";
-            this.comboBoxFilling.Size = new System.Drawing.Size(226, 23);
-            this.comboBoxFilling.TabIndex = 3;
+            this.comboBoxFilling.Size = new System.Drawing.Size(234, 23);
+            this.comboBoxFilling.TabIndex = 2;
+            this.toolTipMain.SetToolTip(this.comboBoxFilling, "Wybór rodzaju wypełnienia");
             this.comboBoxFilling.SelectionChangeCommitted += new System.EventHandler(this.comboBoxFilling_SelectionChangeCommitted);
             // 
             // numericUpDownMassTransferCoefficient
@@ -257,7 +347,8 @@
             this.numericUpDownMassTransferCoefficient.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownMassTransferCoefficient.Name = "numericUpDownMassTransferCoefficient";
             this.numericUpDownMassTransferCoefficient.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownMassTransferCoefficient.TabIndex = 1;
+            this.numericUpDownMassTransferCoefficient.TabIndex = 0;
+            this.toolTipMain.SetToolTip(this.numericUpDownMassTransferCoefficient, "Współczynnik przenikania masy (charakterystyczny dla układu)");
             // 
             // labelFilling
             // 
@@ -282,9 +373,9 @@
             this.labelAbsorbateMolarMassUnit.AutoSize = true;
             this.labelAbsorbateMolarMassUnit.Location = new System.Drawing.Point(288, 50);
             this.labelAbsorbateMolarMassUnit.Name = "labelAbsorbateMolarMassUnit";
-            this.labelAbsorbateMolarMassUnit.Size = new System.Drawing.Size(44, 15);
+            this.labelAbsorbateMolarMassUnit.Size = new System.Drawing.Size(38, 15);
             this.labelAbsorbateMolarMassUnit.TabIndex = 17;
-            this.labelAbsorbateMolarMassUnit.Text = "kg/mol";
+            this.labelAbsorbateMolarMassUnit.Text = "g/mol";
             // 
             // labelAbsorbateMolarMass
             // 
@@ -307,7 +398,8 @@
             this.numericUpDownAbsorbateMolarMass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownAbsorbateMolarMass.Name = "numericUpDownAbsorbateMolarMass";
             this.numericUpDownAbsorbateMolarMass.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownAbsorbateMolarMass.TabIndex = 2;
+            this.numericUpDownAbsorbateMolarMass.TabIndex = 1;
+            this.toolTipMain.SetToolTip(this.numericUpDownAbsorbateMolarMass, "Masa molowa absorbatu (substancji absorbowanej)");
             // 
             // groupBoxAbsorber
             // 
@@ -317,12 +409,12 @@
             this.groupBoxAbsorber.Controls.Add(this.labelEfficiencyUnit);
             this.groupBoxAbsorber.Controls.Add(this.numericUpDownEfficiency);
             this.groupBoxAbsorber.Controls.Add(this.labelEfficiency);
-            this.groupBoxAbsorber.Location = new System.Drawing.Point(12, 350);
+            this.groupBoxAbsorber.Location = new System.Drawing.Point(12, 318);
             this.groupBoxAbsorber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxAbsorber.Name = "groupBoxAbsorber";
             this.groupBoxAbsorber.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxAbsorber.Size = new System.Drawing.Size(710, 103);
-            this.groupBoxAbsorber.TabIndex = 2;
+            this.groupBoxAbsorber.Size = new System.Drawing.Size(718, 103);
+            this.groupBoxAbsorber.TabIndex = 5;
             this.groupBoxAbsorber.TabStop = false;
             this.groupBoxAbsorber.Text = "Absorber";
             // 
@@ -347,7 +439,8 @@
             this.numericUpDownEmulgationPercentage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownEmulgationPercentage.Name = "numericUpDownEmulgationPercentage";
             this.numericUpDownEmulgationPercentage.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownEmulgationPercentage.TabIndex = 15;
+            this.numericUpDownEmulgationPercentage.TabIndex = 1;
+            this.toolTipMain.SetToolTip(this.numericUpDownEmulgationPercentage, "Prędkość przepływu gazu jako procent prędkości emulgacji");
             this.numericUpDownEmulgationPercentage.Value = new decimal(new int[] {
             100,
             0,
@@ -385,7 +478,8 @@
             this.numericUpDownEfficiency.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownEfficiency.Name = "numericUpDownEfficiency";
             this.numericUpDownEfficiency.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownEfficiency.TabIndex = 14;
+            this.numericUpDownEfficiency.TabIndex = 0;
+            this.toolTipMain.SetToolTip(this.numericUpDownEfficiency, "Zadana wydajność procesu absorpcji");
             this.numericUpDownEfficiency.Value = new decimal(new int[] {
             100,
             0,
@@ -405,31 +499,81 @@
             // 
             this.groupBoxInert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxInert.Controls.Add(this.label1);
+            this.groupBoxInert.Controls.Add(this.numericUpDownDensityNormalB);
+            this.groupBoxInert.Controls.Add(this.labelDensityNormalB);
             this.groupBoxInert.Controls.Add(this.labelAbsorbateConcentrationUnitB);
             this.groupBoxInert.Controls.Add(this.labelVolumeIntensityUnitB);
             this.groupBoxInert.Controls.Add(this.numericUpDownAbsorbateConcentrationB);
             this.groupBoxInert.Controls.Add(this.labelAbsorbateConcentrationB);
-            this.groupBoxInert.Controls.Add(this.labelViscosityUnitB);
             this.groupBoxInert.Controls.Add(this.labelDensityUnitDensityB);
             this.groupBoxInert.Controls.Add(this.numericUpDownVolumeIntensityB);
-            this.groupBoxInert.Controls.Add(this.numericUpDownViscosityB);
             this.groupBoxInert.Controls.Add(this.numericUpDownDensityB);
-            this.groupBoxInert.Controls.Add(this.labelViscosityB);
             this.groupBoxInert.Controls.Add(this.labelVolumeIntensityB);
             this.groupBoxInert.Controls.Add(this.labelDenistyB);
             this.groupBoxInert.Location = new System.Drawing.Point(374, 153);
             this.groupBoxInert.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxInert.Name = "groupBoxInert";
             this.groupBoxInert.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxInert.Size = new System.Drawing.Size(356, 187);
-            this.groupBoxInert.TabIndex = 5;
+            this.groupBoxInert.Size = new System.Drawing.Size(356, 155);
+            this.groupBoxInert.TabIndex = 4;
             this.groupBoxInert.TabStop = false;
-            this.groupBoxInert.Text = "Gaz obojętny";
+            this.groupBoxInert.Text = "Gaz oczyszczany";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(288, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "kg/m³";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // numericUpDownDensityNormalB
+            // 
+            this.numericUpDownDensityNormalB.DecimalPlaces = 4;
+            this.numericUpDownDensityNormalB.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            262144});
+            this.numericUpDownDensityNormalB.Location = new System.Drawing.Point(195, 52);
+            this.numericUpDownDensityNormalB.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.numericUpDownDensityNormalB.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownDensityNormalB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            262144});
+            this.numericUpDownDensityNormalB.Name = "numericUpDownDensityNormalB";
+            this.numericUpDownDensityNormalB.Size = new System.Drawing.Size(90, 23);
+            this.numericUpDownDensityNormalB.TabIndex = 1;
+            this.toolTipMain.SetToolTip(this.numericUpDownDensityNormalB, "Gęstość oczyszczanego gazu w warunkach normalnych ( 0 °C , 1 atm)");
+            this.numericUpDownDensityNormalB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownDensityNormalB.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // labelDensityNormalB
+            // 
+            this.labelDensityNormalB.AutoSize = true;
+            this.labelDensityNormalB.Location = new System.Drawing.Point(9, 54);
+            this.labelDensityNormalB.Name = "labelDensityNormalB";
+            this.labelDensityNormalB.Size = new System.Drawing.Size(157, 15);
+            this.labelDensityNormalB.TabIndex = 18;
+            this.labelDensityNormalB.Text = "Gęstość w war. normalnych";
             // 
             // labelAbsorbateConcentrationUnitB
             // 
             this.labelAbsorbateConcentrationUnitB.AutoSize = true;
-            this.labelAbsorbateConcentrationUnitB.Location = new System.Drawing.Point(288, 125);
+            this.labelAbsorbateConcentrationUnitB.Location = new System.Drawing.Point(287, 119);
             this.labelAbsorbateConcentrationUnitB.Name = "labelAbsorbateConcentrationUnitB";
             this.labelAbsorbateConcentrationUnitB.Size = new System.Drawing.Size(18, 15);
             this.labelAbsorbateConcentrationUnitB.TabIndex = 17;
@@ -452,35 +596,26 @@
             0,
             0,
             131072});
-            this.numericUpDownAbsorbateConcentrationB.Location = new System.Drawing.Point(194, 119);
+            this.numericUpDownAbsorbateConcentrationB.Location = new System.Drawing.Point(194, 117);
             this.numericUpDownAbsorbateConcentrationB.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownAbsorbateConcentrationB.Name = "numericUpDownAbsorbateConcentrationB";
             this.numericUpDownAbsorbateConcentrationB.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownAbsorbateConcentrationB.TabIndex = 13;
+            this.numericUpDownAbsorbateConcentrationB.TabIndex = 3;
+            this.toolTipMain.SetToolTip(this.numericUpDownAbsorbateConcentrationB, "Stężenie substancji absorbowanej w oczyszczanym gazie");
             // 
             // labelAbsorbateConcentrationB
             // 
             this.labelAbsorbateConcentrationB.AutoSize = true;
-            this.labelAbsorbateConcentrationB.Location = new System.Drawing.Point(8, 125);
+            this.labelAbsorbateConcentrationB.Location = new System.Drawing.Point(7, 119);
             this.labelAbsorbateConcentrationB.Name = "labelAbsorbateConcentrationB";
             this.labelAbsorbateConcentrationB.Size = new System.Drawing.Size(113, 15);
             this.labelAbsorbateConcentrationB.TabIndex = 15;
             this.labelAbsorbateConcentrationB.Text = "Stężenie absorbatu";
             // 
-            // labelViscosityUnitB
-            // 
-            this.labelViscosityUnitB.AutoSize = true;
-            this.labelViscosityUnitB.Cursor = System.Windows.Forms.Cursors.Default;
-            this.labelViscosityUnitB.Location = new System.Drawing.Point(287, 54);
-            this.labelViscosityUnitB.Name = "labelViscosityUnitB";
-            this.labelViscosityUnitB.Size = new System.Drawing.Size(33, 15);
-            this.labelViscosityUnitB.TabIndex = 12;
-            this.labelViscosityUnitB.Text = "Pa·s";
-            // 
             // labelDensityUnitDensityB
             // 
             this.labelDensityUnitDensityB.AutoSize = true;
-            this.labelDensityUnitDensityB.Location = new System.Drawing.Point(287, 22);
+            this.labelDensityUnitDensityB.Location = new System.Drawing.Point(288, 22);
             this.labelDensityUnitDensityB.Name = "labelDensityUnitDensityB";
             this.labelDensityUnitDensityB.Size = new System.Drawing.Size(38, 15);
             this.labelDensityUnitDensityB.TabIndex = 12;
@@ -503,21 +638,13 @@
             0});
             this.numericUpDownVolumeIntensityB.Name = "numericUpDownVolumeIntensityB";
             this.numericUpDownVolumeIntensityB.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownVolumeIntensityB.TabIndex = 12;
-            // 
-            // numericUpDownViscosityB
-            // 
-            this.numericUpDownViscosityB.DecimalPlaces = 4;
-            this.numericUpDownViscosityB.Increment = new decimal(new int[] {
+            this.numericUpDownVolumeIntensityB.TabIndex = 2;
+            this.toolTipMain.SetToolTip(this.numericUpDownVolumeIntensityB, "Objętościowe natężenie przepływu strumienia oczyszczanego gazu");
+            this.numericUpDownVolumeIntensityB.Value = new decimal(new int[] {
             1,
             0,
             0,
             262144});
-            this.numericUpDownViscosityB.Location = new System.Drawing.Point(194, 52);
-            this.numericUpDownViscosityB.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.numericUpDownViscosityB.Name = "numericUpDownViscosityB";
-            this.numericUpDownViscosityB.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownViscosityB.TabIndex = 11;
             // 
             // numericUpDownDensityB
             // 
@@ -527,7 +654,7 @@
             0,
             0,
             262144});
-            this.numericUpDownDensityB.Location = new System.Drawing.Point(194, 20);
+            this.numericUpDownDensityB.Location = new System.Drawing.Point(195, 20);
             this.numericUpDownDensityB.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownDensityB.Maximum = new decimal(new int[] {
             10000,
@@ -541,21 +668,13 @@
             262144});
             this.numericUpDownDensityB.Name = "numericUpDownDensityB";
             this.numericUpDownDensityB.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownDensityB.TabIndex = 10;
+            this.numericUpDownDensityB.TabIndex = 0;
+            this.toolTipMain.SetToolTip(this.numericUpDownDensityB, "Gęstość oczyszczanego gazu w warunkach procesu");
             this.numericUpDownDensityB.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            // 
-            // labelViscosityB
-            // 
-            this.labelViscosityB.AutoSize = true;
-            this.labelViscosityB.Location = new System.Drawing.Point(9, 54);
-            this.labelViscosityB.Name = "labelViscosityB";
-            this.labelViscosityB.Size = new System.Drawing.Size(134, 15);
-            this.labelViscosityB.TabIndex = 0;
-            this.labelViscosityB.Text = "Lepkość w danej temp.";
             // 
             // labelVolumeIntensityB
             // 
@@ -571,18 +690,15 @@
             this.labelDenistyB.AutoSize = true;
             this.labelDenistyB.Location = new System.Drawing.Point(8, 20);
             this.labelDenistyB.Name = "labelDenistyB";
-            this.labelDenistyB.Size = new System.Drawing.Size(133, 15);
+            this.labelDenistyB.Size = new System.Drawing.Size(138, 15);
             this.labelDenistyB.TabIndex = 0;
-            this.labelDenistyB.Text = "Gęstość w danej temp.";
+            this.labelDenistyB.Text = "Gęstość w war. procesu";
             // 
             // groupBoxAbsorbent
             // 
             this.groupBoxAbsorbent.Controls.Add(this.labelAbsorbentMolarMassUnit);
-            this.groupBoxAbsorbent.Controls.Add(this.labelAbsorbateConcentrationUnitA);
             this.groupBoxAbsorbent.Controls.Add(this.labelAbsorbentMolarMass);
             this.groupBoxAbsorbent.Controls.Add(this.numericUpDownAbsorbentMolarMass);
-            this.groupBoxAbsorbent.Controls.Add(this.numericUpDownAbsorbateConcentrationA);
-            this.groupBoxAbsorbent.Controls.Add(this.labelAbsorbateConcentrationA);
             this.groupBoxAbsorbent.Controls.Add(this.labelDensityUnitA);
             this.groupBoxAbsorbent.Controls.Add(this.numericUpDownDensityA);
             this.groupBoxAbsorbent.Controls.Add(this.labelDensityA);
@@ -596,42 +712,43 @@
             this.groupBoxAbsorbent.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBoxAbsorbent.Name = "groupBoxAbsorbent";
             this.groupBoxAbsorbent.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxAbsorbent.Size = new System.Drawing.Size(350, 187);
-            this.groupBoxAbsorbent.TabIndex = 1;
+            this.groupBoxAbsorbent.Size = new System.Drawing.Size(350, 155);
+            this.groupBoxAbsorbent.TabIndex = 3;
             this.groupBoxAbsorbent.TabStop = false;
             this.groupBoxAbsorbent.Text = "Absorbent";
             // 
-            // labelAbsorbateConcentrationUnitA
+            // labelAbsorbentMolarMassUnit
             // 
-            this.labelAbsorbateConcentrationUnitA.AutoSize = true;
-            this.labelAbsorbateConcentrationUnitA.Location = new System.Drawing.Point(287, 121);
-            this.labelAbsorbateConcentrationUnitA.Name = "labelAbsorbateConcentrationUnitA";
-            this.labelAbsorbateConcentrationUnitA.Size = new System.Drawing.Size(18, 15);
-            this.labelAbsorbateConcentrationUnitA.TabIndex = 14;
-            this.labelAbsorbateConcentrationUnitA.Text = "%";
+            this.labelAbsorbentMolarMassUnit.AutoSize = true;
+            this.labelAbsorbentMolarMassUnit.Location = new System.Drawing.Point(288, 119);
+            this.labelAbsorbentMolarMassUnit.Name = "labelAbsorbentMolarMassUnit";
+            this.labelAbsorbentMolarMassUnit.Size = new System.Drawing.Size(38, 15);
+            this.labelAbsorbentMolarMassUnit.TabIndex = 29;
+            this.labelAbsorbentMolarMassUnit.Text = "g/mol";
             // 
-            // numericUpDownAbsorbateConcentrationA
+            // labelAbsorbentMolarMass
             // 
-            this.numericUpDownAbsorbateConcentrationA.DecimalPlaces = 2;
-            this.numericUpDownAbsorbateConcentrationA.Increment = new decimal(new int[] {
+            this.labelAbsorbentMolarMass.AutoSize = true;
+            this.labelAbsorbentMolarMass.Location = new System.Drawing.Point(8, 119);
+            this.labelAbsorbentMolarMass.Name = "labelAbsorbentMolarMass";
+            this.labelAbsorbentMolarMass.Size = new System.Drawing.Size(84, 15);
+            this.labelAbsorbentMolarMass.TabIndex = 27;
+            this.labelAbsorbentMolarMass.Text = "Masa molowa";
+            // 
+            // numericUpDownAbsorbentMolarMass
+            // 
+            this.numericUpDownAbsorbentMolarMass.DecimalPlaces = 2;
+            this.numericUpDownAbsorbentMolarMass.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDownAbsorbateConcentrationA.Location = new System.Drawing.Point(194, 119);
-            this.numericUpDownAbsorbateConcentrationA.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.numericUpDownAbsorbateConcentrationA.Name = "numericUpDownAbsorbateConcentrationA";
-            this.numericUpDownAbsorbateConcentrationA.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownAbsorbateConcentrationA.TabIndex = 9;
-            // 
-            // labelAbsorbateConcentrationA
-            // 
-            this.labelAbsorbateConcentrationA.AutoSize = true;
-            this.labelAbsorbateConcentrationA.Location = new System.Drawing.Point(8, 121);
-            this.labelAbsorbateConcentrationA.Name = "labelAbsorbateConcentrationA";
-            this.labelAbsorbateConcentrationA.Size = new System.Drawing.Size(113, 15);
-            this.labelAbsorbateConcentrationA.TabIndex = 0;
-            this.labelAbsorbateConcentrationA.Text = "Stężenie absorbatu";
+            this.numericUpDownAbsorbentMolarMass.Location = new System.Drawing.Point(194, 117);
+            this.numericUpDownAbsorbentMolarMass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.numericUpDownAbsorbentMolarMass.Name = "numericUpDownAbsorbentMolarMass";
+            this.numericUpDownAbsorbentMolarMass.Size = new System.Drawing.Size(90, 23);
+            this.numericUpDownAbsorbentMolarMass.TabIndex = 3;
+            this.toolTipMain.SetToolTip(this.numericUpDownAbsorbentMolarMass, "Masa molowa cieczy absorbującej");
             // 
             // labelDensityUnitA
             // 
@@ -664,7 +781,8 @@
             262144});
             this.numericUpDownDensityA.Name = "numericUpDownDensityA";
             this.numericUpDownDensityA.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownDensityA.TabIndex = 6;
+            this.numericUpDownDensityA.TabIndex = 0;
+            this.toolTipMain.SetToolTip(this.numericUpDownDensityA, "Gęstość cieczy absorbującej w warunkach procesu");
             this.numericUpDownDensityA.Value = new decimal(new int[] {
             1,
             0,
@@ -676,18 +794,18 @@
             this.labelDensityA.AutoSize = true;
             this.labelDensityA.Location = new System.Drawing.Point(8, 22);
             this.labelDensityA.Name = "labelDensityA";
-            this.labelDensityA.Size = new System.Drawing.Size(133, 15);
+            this.labelDensityA.Size = new System.Drawing.Size(176, 15);
             this.labelDensityA.TabIndex = 0;
-            this.labelDensityA.Text = "Gęstość w danej temp.";
+            this.labelDensityA.Text = "Gęstość w warunkach procesu";
             // 
             // labelViscosityUnitA
             // 
             this.labelViscosityUnitA.AutoSize = true;
             this.labelViscosityUnitA.Location = new System.Drawing.Point(287, 54);
             this.labelViscosityUnitA.Name = "labelViscosityUnitA";
-            this.labelViscosityUnitA.Size = new System.Drawing.Size(33, 15);
+            this.labelViscosityUnitA.Size = new System.Drawing.Size(44, 15);
             this.labelViscosityUnitA.TabIndex = 8;
-            this.labelViscosityUnitA.Text = "Pa·s";
+            this.labelViscosityUnitA.Text = "mPa·s";
             // 
             // numericUpDownViscosityA
             // 
@@ -701,7 +819,8 @@
             this.numericUpDownViscosityA.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownViscosityA.Name = "numericUpDownViscosityA";
             this.numericUpDownViscosityA.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownViscosityA.TabIndex = 7;
+            this.numericUpDownViscosityA.TabIndex = 1;
+            this.toolTipMain.SetToolTip(this.numericUpDownViscosityA, "Lepkość cieczy absorbującej w warunkach procesu");
             // 
             // labelViscosityA
             // 
@@ -738,7 +857,8 @@
             0});
             this.numericUpDownMassIntensityA.Name = "numericUpDownMassIntensityA";
             this.numericUpDownMassIntensityA.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownMassIntensityA.TabIndex = 8;
+            this.numericUpDownMassIntensityA.TabIndex = 2;
+            this.toolTipMain.SetToolTip(this.numericUpDownMassIntensityA, "Masowe natężenie przepływu strumienia cieczy absorbującej");
             // 
             // labelMassIntensityA
             // 
@@ -749,155 +869,12 @@
             this.labelMassIntensityA.TabIndex = 0;
             this.labelMassIntensityA.Text = "Masowe nat. przepływu";
             // 
-            // textBoxLog
-            // 
-            this.textBoxLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBoxLog.Location = new System.Drawing.Point(12, 80);
-            this.textBoxLog.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBoxLog.Name = "textBoxLog";
-            this.textBoxLog.ReadOnly = true;
-            this.textBoxLog.Size = new System.Drawing.Size(713, 23);
-            this.textBoxLog.TabIndex = 20;
-            this.toolTipMain.SetToolTip(this.textBoxLog, "Komunikaty wyświetlane przez program w czasie pracy.");
-            // 
-            // groupBoxOutputData
-            // 
-            this.groupBoxOutputData.Controls.Add(this.labelAbsorberProfileUnit);
-            this.groupBoxOutputData.Controls.Add(this.labelAbsorberHeightUnit);
-            this.groupBoxOutputData.Controls.Add(this.textBoxLog);
-            this.groupBoxOutputData.Controls.Add(this.buttonCalculate);
-            this.groupBoxOutputData.Controls.Add(this.buttonClear);
-            this.groupBoxOutputData.Controls.Add(this.labelAbsorberProfile);
-            this.groupBoxOutputData.Controls.Add(this.textBoxAbsorberProfile);
-            this.groupBoxOutputData.Controls.Add(this.textBoxAbsorberHeight);
-            this.groupBoxOutputData.Controls.Add(this.labelAbsorberHeight);
-            this.groupBoxOutputData.Location = new System.Drawing.Point(2, 463);
-            this.groupBoxOutputData.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxOutputData.Name = "groupBoxOutputData";
-            this.groupBoxOutputData.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBoxOutputData.Size = new System.Drawing.Size(735, 112);
-            this.groupBoxOutputData.TabIndex = 3;
-            this.groupBoxOutputData.TabStop = false;
-            this.groupBoxOutputData.Text = "Dane wyjściowe";
-            // 
-            // labelAbsorberProfileUnit
-            // 
-            this.labelAbsorberProfileUnit.AutoSize = true;
-            this.labelAbsorberProfileUnit.Location = new System.Drawing.Point(657, 52);
-            this.labelAbsorberProfileUnit.Name = "labelAbsorberProfileUnit";
-            this.labelAbsorberProfileUnit.Size = new System.Drawing.Size(22, 15);
-            this.labelAbsorberProfileUnit.TabIndex = 10;
-            this.labelAbsorberProfileUnit.Text = "m²";
-            // 
-            // labelAbsorberHeightUnit
-            // 
-            this.labelAbsorberHeightUnit.AutoSize = true;
-            this.labelAbsorberHeightUnit.Location = new System.Drawing.Point(657, 22);
-            this.labelAbsorberHeightUnit.Name = "labelAbsorberHeightUnit";
-            this.labelAbsorberHeightUnit.Size = new System.Drawing.Size(18, 15);
-            this.labelAbsorberHeightUnit.TabIndex = 9;
-            this.labelAbsorberHeightUnit.Text = "m";
-            // 
-            // buttonCalculate
-            // 
-            this.buttonCalculate.Location = new System.Drawing.Point(12, 23);
-            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(138, 50);
-            this.buttonCalculate.TabIndex = 16;
-            this.buttonCalculate.Text = "Oblicz";
-            this.buttonCalculate.UseVisualStyleBackColor = true;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.Location = new System.Drawing.Point(158, 22);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(138, 51);
-            this.buttonClear.TabIndex = 17;
-            this.buttonClear.Text = "Wyczyść";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
-            // 
-            // labelAbsorberProfile
-            // 
-            this.labelAbsorberProfile.AutoSize = true;
-            this.labelAbsorberProfile.Location = new System.Drawing.Point(377, 53);
-            this.labelAbsorberProfile.Name = "labelAbsorberProfile";
-            this.labelAbsorberProfile.Size = new System.Drawing.Size(111, 15);
-            this.labelAbsorberProfile.TabIndex = 3;
-            this.labelAbsorberProfile.Text = "Przekrój absorbera";
-            // 
-            // textBoxAbsorberProfile
-            // 
-            this.textBoxAbsorberProfile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBoxAbsorberProfile.Location = new System.Drawing.Point(561, 50);
-            this.textBoxAbsorberProfile.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBoxAbsorberProfile.Name = "textBoxAbsorberProfile";
-            this.textBoxAbsorberProfile.ReadOnly = true;
-            this.textBoxAbsorberProfile.Size = new System.Drawing.Size(87, 23);
-            this.textBoxAbsorberProfile.TabIndex = 19;
-            this.textBoxAbsorberProfile.Text = "0";
-            // 
-            // textBoxAbsorberHeight
-            // 
-            this.textBoxAbsorberHeight.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBoxAbsorberHeight.Location = new System.Drawing.Point(561, 20);
-            this.textBoxAbsorberHeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBoxAbsorberHeight.Name = "textBoxAbsorberHeight";
-            this.textBoxAbsorberHeight.ReadOnly = true;
-            this.textBoxAbsorberHeight.Size = new System.Drawing.Size(87, 23);
-            this.textBoxAbsorberHeight.TabIndex = 18;
-            this.textBoxAbsorberHeight.Text = "0";
-            // 
-            // labelAbsorberHeight
-            // 
-            this.labelAbsorberHeight.AutoSize = true;
-            this.labelAbsorberHeight.Location = new System.Drawing.Point(377, 23);
-            this.labelAbsorberHeight.Name = "labelAbsorberHeight";
-            this.labelAbsorberHeight.Size = new System.Drawing.Size(123, 15);
-            this.labelAbsorberHeight.TabIndex = 0;
-            this.labelAbsorberHeight.Text = "Wysokość absorbera";
-            // 
-            // labelAbsorbentMolarMassUnit
-            // 
-            this.labelAbsorbentMolarMassUnit.AutoSize = true;
-            this.labelAbsorbentMolarMassUnit.Location = new System.Drawing.Point(288, 154);
-            this.labelAbsorbentMolarMassUnit.Name = "labelAbsorbentMolarMassUnit";
-            this.labelAbsorbentMolarMassUnit.Size = new System.Drawing.Size(44, 15);
-            this.labelAbsorbentMolarMassUnit.TabIndex = 29;
-            this.labelAbsorbentMolarMassUnit.Text = "kg/mol";
-            // 
-            // labelAbsorbentMolarMass
-            // 
-            this.labelAbsorbentMolarMass.AutoSize = true;
-            this.labelAbsorbentMolarMass.Location = new System.Drawing.Point(8, 154);
-            this.labelAbsorbentMolarMass.Name = "labelAbsorbentMolarMass";
-            this.labelAbsorbentMolarMass.Size = new System.Drawing.Size(143, 15);
-            this.labelAbsorbentMolarMass.TabIndex = 27;
-            this.labelAbsorbentMolarMass.Text = "Masa molowa absorbatu";
-            // 
-            // numericUpDownAbsorbentMolarMass
-            // 
-            this.numericUpDownAbsorbentMolarMass.DecimalPlaces = 2;
-            this.numericUpDownAbsorbentMolarMass.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownAbsorbentMolarMass.Location = new System.Drawing.Point(194, 152);
-            this.numericUpDownAbsorbentMolarMass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.numericUpDownAbsorbentMolarMass.Name = "numericUpDownAbsorbentMolarMass";
-            this.numericUpDownAbsorbentMolarMass.Size = new System.Drawing.Size(90, 23);
-            this.numericUpDownAbsorbentMolarMass.TabIndex = 28;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(761, 620);
+            this.ClientSize = new System.Drawing.Size(765, 588);
             this.Controls.Add(this.groupBoxInputData);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -906,11 +883,12 @@
             this.Text = "Kalkulator wymiarów absorbera";
             this.Load += new System.EventHandler(this.formMain_Load);
             this.groupBoxInputData.ResumeLayout(false);
+            this.groupBoxOutputData.ResumeLayout(false);
+            this.groupBoxOutputData.PerformLayout();
             this.groupBoxSystem.ResumeLayout(false);
             this.groupBoxSystem.PerformLayout();
             this.groupBoxEquation.ResumeLayout(false);
             this.groupBoxEquation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEquationB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEquationA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMassTransferCoefficient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateMolarMass)).EndInit();
@@ -920,19 +898,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEfficiency)).EndInit();
             this.groupBoxInert.ResumeLayout(false);
             this.groupBoxInert.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityNormalB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateConcentrationB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVolumeIntensityB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownViscosityB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityB)).EndInit();
             this.groupBoxAbsorbent.ResumeLayout(false);
             this.groupBoxAbsorbent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbateConcentrationA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbentMolarMass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDensityA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownViscosityA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMassIntensityA)).EndInit();
-            this.groupBoxOutputData.ResumeLayout(false);
-            this.groupBoxOutputData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAbsorbentMolarMass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -956,19 +931,13 @@
         private System.Windows.Forms.GroupBox groupBoxInert;
         private System.Windows.Forms.Label labelVolumeIntensityB;
         private System.Windows.Forms.Label labelDenistyB;
-        private System.Windows.Forms.Label labelViscosityB;
-        private System.Windows.Forms.NumericUpDown numericUpDownViscosityB;
         private System.Windows.Forms.NumericUpDown numericUpDownDensityB;
-        private System.Windows.Forms.Label labelViscosityUnitB;
         private System.Windows.Forms.Label labelDensityUnitDensityB;
         private System.Windows.Forms.NumericUpDown numericUpDownVolumeIntensityB;
         private System.Windows.Forms.Label labelVolumeIntensityUnitB;
         private System.Windows.Forms.Label labelAbsorbateConcentrationUnitB;
         private System.Windows.Forms.NumericUpDown numericUpDownAbsorbateConcentrationB;
         private System.Windows.Forms.Label labelAbsorbateConcentrationB;
-        private System.Windows.Forms.Label labelAbsorbateConcentrationUnitA;
-        private System.Windows.Forms.NumericUpDown numericUpDownAbsorbateConcentrationA;
-        private System.Windows.Forms.Label labelAbsorbateConcentrationA;
         private System.Windows.Forms.GroupBox groupBoxAbsorber;
         private System.Windows.Forms.Label labelEmulgationPercentageUnit;
         private System.Windows.Forms.NumericUpDown numericUpDownEmulgationPercentage;
@@ -995,13 +964,14 @@
         private System.Windows.Forms.Label labelAbsorbateMolarMass;
         private System.Windows.Forms.NumericUpDown numericUpDownAbsorbateMolarMass;
         private System.Windows.Forms.GroupBox groupBoxEquation;
-        private System.Windows.Forms.Label labelEquationB;
         private System.Windows.Forms.Label labelEquationA;
-        private System.Windows.Forms.NumericUpDown numericUpDownEquationB;
         private System.Windows.Forms.NumericUpDown numericUpDownEquationA;
         private System.Windows.Forms.Label labelAbsorbentMolarMassUnit;
         private System.Windows.Forms.Label labelAbsorbentMolarMass;
         private System.Windows.Forms.NumericUpDown numericUpDownAbsorbentMolarMass;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDownDensityNormalB;
+        private System.Windows.Forms.Label labelDensityNormalB;
     }
 }
 
